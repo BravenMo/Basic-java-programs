@@ -1,27 +1,28 @@
-package programming;
-
+package oop;
 public class Student {
-		 int rollno;  
-		 String name;  
-		 void insertRecord(int r, String n){  
-		  rollno=r;  
-		  name=n;  
-		 }  
-		 void displayInformation(){
-			 System.out.println(rollno+" "+name);
-		}    
-
-		 public static void main(String args[]){  
-		  Student s1=new Student();  
-		  Student s2=new Student();  
-		  s1.insertRecord(111,"Karan");  
-		  s2.insertRecord(222,"Aryan");  
-		  s1.displayInformation();  
-		  s2.displayInformation();  
-		  Student s3=new Student();
-		  s3.rollno=333;
-		  s3.name="Mohit";
-		  s3.displayInformation();
-		 }  
-		  
+	int rollno;
+	String name;
+	static String college="VIT";
+	
+	static void change() {
+		college="Vellore";
+	}
+	
+	Student(int r,String n){
+		rollno=r;
+		name=n;
+	}
+	
+	void display() {
+		System.out.println(rollno+" "+name+" "+college);
+	}
+	public static void main(String[] args) {
+		Student.change();
+		Student s1=new Student(396,"Deepu");
+		Student s2=new Student(397,"Swetha");
+		Student s3= new Student(111,"Shanthi");
+		s1.display();
+		s2.display();
+		s3.display();
+	}
 }
